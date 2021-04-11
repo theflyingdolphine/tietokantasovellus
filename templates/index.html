@@ -1,0 +1,41 @@
+{% if session.user_id %}
+<h1>Main page</h1>
+
+<b>Play game 1 <a href="/game1">here</a><br> 
+Play game 2 <a href="/game2">here</a><br>
+<br><br>
+
+Random questions <a href="/game3">here</a><br><br></b>
+{% endif %}
+{% if session.role == 2 %}
+<a href="/newgame">Add question</a>
+<br>
+<a href="/delete">Delete own questions</a>
+<br><br>
+
+{% endif %}
+{% if session.user_id %}
+<b>Statistics</b> (username, game1, game2, other points) <br>
+<hr>
+{% for stats in statistics %}
+{{ stats }}
+<hr>
+{% endfor %}
+<br> 
+<b>Reviews</b><br>
+<hr>
+{% for review in reviews %}
+{{ review[1] }}
+<hr>
+{% endfor %}
+<a href="/new">Add review</a>
+<br><br>
+
+<a href="/logout">Logout</a>
+
+{% elif not session.user_id %}
+<h1>Welcome to the application<h1>
+</form>
+Login <a href="/login">here</a>
+<p>
+{% endif %}

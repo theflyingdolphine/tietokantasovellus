@@ -1,0 +1,10 @@
+<form action="/result3" method="POST">
+<b>Question number: {{ id }} </b><br>
+<b>Question: {{ question }} </b><br>
+<p>
+Answer: <input type="int" name="answer"><br><br>Submit
+<input type="hidden" name="question" value=" {{ question }} ">
+<input type="hidden" name="id" value=" {{ id }} ">
+<input type="submit" value="Submit"><br>
+Return back to main page <a href="/">here</a><br> 
+</form>
