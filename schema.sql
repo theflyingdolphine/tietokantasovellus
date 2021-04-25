@@ -22,6 +22,8 @@ CREATE TABLE game3 (
 	answer INT
 );
 
+INSERT INTO game3 (question, answer) VALUES ('What is 2 to the power of 5', 32);
+
 CREATE TABLE reviews (
 	id SERIAL PRIMARY KEY,
 	content TEXT
