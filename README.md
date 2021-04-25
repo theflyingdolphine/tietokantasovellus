@@ -1,8 +1,6 @@
 # tietokantasovellus
 Matematiikka sovellus
 
-Kaikki ominaisuudet toimitvat flaskissa, mutta en ole saanut kytkettyä sovellusken herokuuhun.
-
 Sovelluksen ominaisuuksia:
 
 - Käyttäjä voi kirjautua sisään ja ulos sekä luoda uuden tunnuksen.
@@ -18,3 +16,7 @@ Sovelluksen ominaisuuksia:
 - "User" käyttäjät, näkevät ainoastaan pelit, oma tilasto sekä arvostelut/ voivat itse kirjoittaa arvostelun.
  
 - "Admin" käyttäjällä on kaikki samat ominaisuudet kuin "user" käyttäjällä sekä voi lisätä kysymyksiä "game3", poistaa omat kysymykset sekä näkevät kaikkien käyttäjien tilastot.
+
+Sovelluksen kaikki ominaisuudet toimii paitsi palautteen saanti sekä tilaston lisääminen tietokantaan ensimmäiseen ja toisen pelin jälkeen.
+Linkki sovellukseen:
+https://ancient-tundra-97132.herokuapp.com/
