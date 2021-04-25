@@ -24,6 +24,11 @@ CREATE TABLE game3 (
 
 INSERT INTO game3 (question, answer) VALUES ('What is 2 to the power of 5', 32);
 
+INSERT INTO game3 (question, answer) VALUES ('What is the product of 13 times 5', 65);
+
+INSERT INTO game3 (question, answer) VALUES ('What is the difference of 352 and 72', 280);
+
+
 CREATE TABLE reviews (
 	id SERIAL PRIMARY KEY,
 	content TEXT
