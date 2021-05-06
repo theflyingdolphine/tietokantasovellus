@@ -1,6 +1,7 @@
 from db import db
 from flask import session
 import re, users
+from random import randint
 
 def result(choice1, choice2, choice3, user_id):
     score = 0
@@ -71,7 +72,10 @@ def add(question, answer, user_id):
 
 def game3(i, id):
     if i == 0:
-        values = db.session.execute("SELECT id FROM game3 ORDER BY random() LIMIT 1").fetchall()
+        sql = "SELECT COUNT(*) FROM game3"
+        size = db.session.execute(sql).fetchone()[0]
+        which = randint(0, size-1)
+        values = db.session.execute("SELECT id FROM game3 ORDER BY random() LIMIT 1 OFFSET :which").fetchall()
     else:
         id = str(id)
         id = int(id[2:len(id)-3])
