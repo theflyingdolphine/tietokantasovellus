@@ -31,7 +31,7 @@ def result(choice1, choice2, choice3, user_id):
     if c3 == v3:
         score +=1
 
-    return score
+    return c1, v2
 
 def result2(choice1, choice2, choice3):
     score = 0
