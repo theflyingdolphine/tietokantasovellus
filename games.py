@@ -76,7 +76,7 @@ def game3(i, id):
         size = db.session.execute(sql).fetchone()[0]
         which = randint(0, size-1)
         question_id = ("SELECT id FROM game3 LIMIT 1 OFFSET :which")
-        values = db.session.execute(question_id, {"which":which}).fetchone()
+        values = db.session.execute(question_id, {"which":which}).fetchall()
         
     else:
         id = str(id)
