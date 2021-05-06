@@ -55,7 +55,7 @@ def result():
     choice2 = request.form["choice2"]
     choice3 = request.form["choice3"]
     score = games.result(choice1, choice2, choice3, users.user_id())
-    values = statistics.result(score)
+    #values = statistics.result(score)
     return render_template("result.html", choice1=choice1, choice2=choice2, choice3=choice3, score=score, values=values)
 
 @app.route("/game2")
