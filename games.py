@@ -75,7 +75,9 @@ def game3(i, id):
         sql = "SELECT COUNT(*) FROM game3"
         size = db.session.execute(sql).fetchone()[0]
         which = randint(0, size-1)
-        values = db.session.execute("SELECT id FROM game3 ORDER BY random() LIMIT 1 OFFSET :which").fetchall()
+        question_id = ("SELECT id FROM game3 LIMIT 1 OFFSET :which")
+        values = db.session.execute(question_id).fetchone()
+        
     else:
         id = str(id)
         id = int(id[2:len(id)-3])
