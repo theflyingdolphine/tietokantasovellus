@@ -81,10 +81,10 @@ def new():
 def send():
     users.check_csrf()
     content = request.form["content"]
-    if content == "":
-        return render_template("error.html",message="Fill in all forms!")
-    else reviews.send(content):
-        return redirect("/")
+    if content != "":
+        if reviews.send(content):
+            return redirect("/")
+    return render_template("error.html",message="Fill in all forms!")
 
 @app.route("/newgame")
 def newgame():
