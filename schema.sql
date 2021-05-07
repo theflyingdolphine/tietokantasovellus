@@ -10,6 +10,11 @@ CREATE TABLE game1 (
 	content TEXT
 );
 
+
+INSERT INTO game1 (content) VALUES ('12');
+INSERT INTO game1 (content) VALUES ('6');
+INSERT INTO game1 (content) VALUES ('9');
+
 CREATE TABLE game2 (
 	id SERIAL PRIMARY KEY,
 	content TEXT
