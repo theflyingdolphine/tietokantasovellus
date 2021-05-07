@@ -31,8 +31,18 @@ def result(choice1, choice2, choice3, user_id):
     v3 = list(map(int, choice3))
     if c3 == v3:
         score +=1
+        
     if (c1 == []):
-        score = 111
+        sql = "INSERT INTO game1 (content) VALUES (:content)"
+        db.session.execute(sql, {"content":'12'})
+        db.session.commit()
+        sql = "INSERT INTO game1 (content) VALUES (:content)"
+        db.session.execute(sql, {"content":'6'})
+        db.session.commit()
+        sql = "INSERT INTO game1 (content) VALUES (:content)"
+        db.session.execute(sql, {"content":'9'})
+        db.session.commit()
+        score = 1010
 
     return score
 
