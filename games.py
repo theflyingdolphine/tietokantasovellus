@@ -31,8 +31,20 @@ def result(choice1, choice2, choice3, user_id):
     v3 = list(map(int, choice3))
     if c3 == v3:
         score +=1
+        
+    sql = "UPDATE game1 SET content=:content WHERE id=:id"
+    db.session.execute(sql, {"content":3,"id":1})
+    db.session.commit()
+    
+    sql = "UPDATE game1 SET content=:content WHERE id=:id"
+    db.session.execute(sql, {"content":1,"id":2})
+    db.session.commit()
+    
+    sql = "UPDATE game1 SET content=:content WHERE id=:id"
+    db.session.execute(sql, {"content":4,"id":3})
+    db.session.commit()
 
-    return c1,v1
+    return c1,v1,score
 
 def result2(choice1, choice2, choice3):
     score = 0
