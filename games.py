@@ -5,8 +5,7 @@ from random import randint
 
 def result(choice1, choice2, choice3, user_id):
     score = 0
-    value1 = "SELECT content FROM game1 WHERE id=1"
-    correct1 = db.session.execute(value1, {"id":choice1}).fetchone()
+    correct1 = db.session.execute("SELECT content FROM game1 WHERE id=1").fetchone()
     correct1 = re.findall(r'\d+', str(correct1))
     choice1 = re.findall(r'\d+', str(choice1))
     c1 = list(map(int, correct1))
