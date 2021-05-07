@@ -58,17 +58,6 @@ def result():
     values = statistics.result(score)
     return render_template("result.html", choice1=choice1, choice2=choice2, choice3=choice3, score=score, values=values)
 
-@app.route("/answer")
-def order():
-    return render_template("answer.html")
-
-@app.route("/send", methods=["POST"])
-def send():
-    content = request.form["content"]
-    if games.add_to_db(content):
-        return redirect("/")
-
-
 @app.route("/game2")
 def order2():
     return render_template("game2.html")
