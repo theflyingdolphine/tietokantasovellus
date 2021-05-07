@@ -62,16 +62,6 @@ def result2(choice1, choice2, choice3):
     v3 = list(map(int, choice3))
     if c3 == v3:
         score +=1
-        
-    sql = "INSERT INTO game2 (content) VALUES (:content)"
-    db.session.execute(sql, {"content":'4'})
-    db.session.commit()
-    sql = "INSERT INTO game2 (content) VALUES (:content)"
-    db.session.execute(sql, {"content":'2'})
-    db.session.commit()
-    sql = "INSERT INTO game2 (content) VALUES (:content)"
-    db.session.execute(sql, {"content":'4'})
-    db.session.commit()
    
     return score
 
