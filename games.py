@@ -6,7 +6,6 @@ from random import randint
 def result(choice1, choice2, choice3, user_id):
     score = 0
     value1 = "SELECT content FROM game1 WHERE id=1"
-    value11 = db.session.execute("SELECT content FROM game1 WHERE id=1").fetchone()
     correct1 = db.session.execute(value1, {"id":1}).fetchone()
     correct1 = re.findall(r'\d+', str(correct1))
     choice1 = re.findall(r'\d+', str(choice1))
@@ -33,7 +32,7 @@ def result(choice1, choice2, choice3, user_id):
     if c3 == v3:
         score +=1
 
-    return c1,v1, value11
+    return score
 
 def result2(choice1, choice2, choice3):
     score = 0
