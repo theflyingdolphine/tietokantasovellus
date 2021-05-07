@@ -18,11 +18,11 @@ Random questions <a href="/game3">here</a><br><br></b>
 <b>Statistics</b> (username, game1, game2, other points) <br>
 <hr>
 {% for stats in statistics %}
-<b> Username: {{ stats[0] }} <br>
-<b> Game1: {{ stats[1] }} <br>
-<b> Game2: {{ stats[2] }} <br>
-<b> Random questions: {{ stats[3] }} <br>
-<b> Total score: {{ stats[3] + stats[2] + stats[1] }} <br>
+Username: {{ stats[0] }} <br>
+Game1: {{ stats[1] }} <br>
+Game2: {{ stats[2] }} <br>
+Random questions: {{ stats[3] }} <br>
+Total score: {{ stats[3] + stats[2] + stats[1] }} <br>
 <hr>
 {% endfor %}
 <br> 
