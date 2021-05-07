@@ -72,24 +72,6 @@ def add(question, answer, user_id):
     return True
 
 def game3(i, id):
-    question = 'What is 2 to the power of 8'
-    answer = 256
-    sql = "INSERT INTO game3 (question,answer) VALUES (:question,:answer)"
-    db.session.execute(sql, {"question":question,"answer":answer})
-    db.session.commit()
-    
-    question = 'What is the product of 12 times 11'
-    answer = 132
-    sql = "INSERT INTO game3 (question,answer) VALUES (:question,:answer)"
-    db.session.execute(sql, {"question":question,"answer":answer})
-    db.session.commit()
-    
-    question = 'What is the difference of 519 and 67'
-    answer = 452
-    sql = "INSERT INTO game3 (question,answer) VALUES (:question,:answer)"
-    db.session.execute(sql, {"question":question,"answer":answer})
-    db.session.commit()
-    
     if i == 0:
         sql = "SELECT COUNT(*) FROM game3"
         size = db.session.execute(sql).fetchone()[0]
